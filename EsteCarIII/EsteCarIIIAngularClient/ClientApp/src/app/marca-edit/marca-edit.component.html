@@ -1,0 +1,15 @@
+<div class="marca-edit">
+  <div>
+    <label for="text">Marca:</label>
+    <br />
+    <textarea id="text" [(ngModel)]="marca.designacao" placeholder="colocar a marca..."></textarea>
+  </div>
+  <div>
+    <input *ngIf="editMode" type="button" value="Atualizar" (click)="onSubmit(marca)" />
+    <input *ngIf="!editMode" type="button" value="Criar" (click)="onSubmit(marca)" />
+    <input type="button" value="Cancel" (click)="onBack()" />
+  </div>
+
+ <!-- <answer-list *ngIf="editMode" [question]="question"></answer-list>-->
+
+</div>
